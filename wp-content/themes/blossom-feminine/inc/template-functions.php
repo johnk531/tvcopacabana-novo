@@ -51,55 +51,6 @@ if( ! function_exists( 'blossom_feminine_header' ) ) :
 function blossom_feminine_header(){ 
     $bg = get_header_image() ? ' style="background-image:url(' . esc_url( get_header_image() ) . ')"' : ''; ?>
     <header id="masthead" class="site-header wow fadeIn" data-wow-delay="0.1s" itemscope itemtype="http://schema.org/WPHeader">
-    
-		<div class="header-t">
-			<div class="container">
-
-                <?php if( has_nav_menu('secondary') ) { ?>
-				    <button aria-label="<?php esc_attr_e( 'secondary menu toggle button', 'blossom-feminine' ); ?>" id="secondary-toggle-button" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle"><i class="fa fa-bars"></i></button>	
-                <?php } ?>
-
-                <nav id="secondary-navigation" class="secondary-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <div class="secondary-menu-list menu-modal cover-modal" data-modal-target-string=".menu-modal">
-                        <button class="close close-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
-                            <span class="toggle-bar"></span>
-                            <span class="toggle-bar"></span>
-                        </button>
-                        <div class="mobile-menu" aria-label="<?php esc_attr_e( 'Mobile', 'blossom-feminine' ); ?>">
-                			<?php
-                				wp_nav_menu( array(
-                					'theme_location' => 'secondary',
-                					'menu_id'        => 'secondary-menu',
-                                    'menu_class'     => 'menu-modal',
-                                    'fallback_cb'    => 'blossom_feminine_secondary_menu_fallback',
-                				) );
-                			?>
-                        </div>
-                    </div>
-                
-        		</nav><!-- #secondary-navigation -->
-                
-				<div class="right">
-					<div class="tools">
-						<div class="form-section">
-							<button aria-label="<?php esc_attr_e( 'search toggle button', 'blossom-feminine' ); ?>" id="btn-search" class="search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-                                <i class="fas fa-search"></i>
-                            </button>
-							<div class="form-holder search-modal cover-modal" data-modal-target-string=".search-modal">
-								<div class="form-holder-inner">
-                                    <?php get_search_form(); ?>                        
-                                </div>
-							</div>
-						</div>
-                        <?php if( blossom_feminine_is_woocommerce_activated() ) blossom_feminine_wc_cart_count(); ?>					
-					</div>
-                    
-					<?php blossom_feminine_social_links(); ?>
-                    
-				</div>
-                
-			</div>
-		</div><!-- .header-t -->
         
 		<div class="header-m site-branding"<?php echo $bg; ?>>
 			<div class="container" itemscope itemtype="http://schema.org/Organization">

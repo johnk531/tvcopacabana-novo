@@ -875,15 +875,7 @@ function blossom_feminine_footer_bottom() { ?>
     <div class="site-info">
         <div class="container">
             <?php
-                blossom_feminine_get_footer_copyright();
-                
-                esc_html_e( ' Blossom Mommy Blog | Developed By ', 'blossom-mommy-blog' );
-                echo '<a href="' . esc_url( 'https://blossomthemes.com/' ) .'" rel="nofollow" target="_blank">' . esc_html__( ' Blossom Themes', 'blossom-mommy-blog' ) . '</a>.';
-                
-                printf( esc_html__( ' Powered by %s', 'blossom-mommy-blog' ), '<a href="'. esc_url( __( 'https://wordpress.org/', 'blossom-mommy-blog' ) ) .'" target="_blank">WordPress</a>.' );
-                if ( function_exists( 'the_privacy_policy_link' ) ) {
-                    the_privacy_policy_link();
-                }
+                blossom_feminine_get_footer_copyright();                
             ?>                    
         </div>
     </div>
